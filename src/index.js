@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://alex:alex@cluster0-lcppi.mongodb.net/week10?retr
     useUnifiedTopology: true,
 });
 
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(routes);
 
